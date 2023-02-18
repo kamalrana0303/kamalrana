@@ -1,0 +1,31 @@
+:host {
+    font-family: var(--font-family) !important;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1,h2,h3,h4,h5,p{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    font-size: 20px !important;
+}
+ul,li{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.item{
+    width: 200px;
+}
+.email{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F2F5F7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

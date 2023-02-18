@@ -1,0 +1,245 @@
+.intro-header {
+    background-color: #1876D1;
+    min-height: 200px;
+    padding: 30px 20px 10px 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 500px) {
+    .intro-header {
+        padding: 30px 15px 10px 15px !important;
+        gap: 80px !important;
+    }
+}
+
+:host {
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+    ;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+p {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: start;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.section-1 {
+    margin: 30px 10px 100px 10px;
+    padding: 0px 100px;
+    gap: 70px;
+
+}
+
+@media(max-width: 500px) {
+    .section-1 {
+        padding: 0px !important;
+    }
+}
+
+.profile {
+    gap: 20px;
+    color: #FFFFFF;
+}
+.office,.backend,.front-end,.db{
+    cursor: pointer;
+}
+
+@media(max-width: 500px) {
+    .profile {
+        flex-direction: column !important;
+    }
+}
+
+.office {
+    gap: 10px;
+}
+
+@media(max-width: 500px) {
+    .office {
+
+        flex-direction: column;
+    }
+}
+
+.office>.img {
+    min-height: 300px;
+    background-image: url('../../../assets/office.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.front-end>.img {
+    min-height: 200px;
+    background-image: url('../../../assets/front-end.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.backend>.img {
+    min-height: 200px;
+    background-image: url('../../../assets/backend.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.db>.img {
+    min-height: 200px;
+    background-image: url('../../../assets/db.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.db>div>h1,.backend>div>h1,.front-end>div>h1{
+    margin-top:10px !important;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.detail {
+    gap: 10px;
+}
+
+.office>.detail>p {
+    color: rgba(0, 0, 0, .54) !important;
+    fill: rgba(0, 0, 0, .54) !important;
+}
+
+.thumb {
+    gap: 10px;
+}
+
+.thumb-detail {
+    gap: 2px;
+}
+
+.thumb-detail>h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    text-rendering: auto;
+    color: #3777C0 !important;
+    font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    fill: rgba(0, 0, 0, .54);
+}
+
+.thumb-detail>div {
+    font-size: 11px !important;
+    line-height: 1.4;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dot {
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+}
+
+.dot::after {
+    display: inline;
+    content: '\00B7';
+}
+
+.readingTime::after {
+    content: attr(title);
+}
+
+.text-normal {
+    color: rgba(0, 0, 0, .54) !important;
+    fill: rgba(0, 0, 0, .54) !important;
+}
+
+.features {
+    gap: 20px;
+}
+@media (max-width: 500px){
+    .features{
+        flex-direction: column !important;
+    }
+}
+
+.footer{
+    background-color: #1876D1;
+    min-height: 100px;
+    padding: 20px;
+}
+.footer-list{
+    gap: 12px;
+    font-weight: 100;
+    font-size:12px;
+    line-height: 1.4;
+}
+.footer-list>.dot{
+    color: #FFFFFF;
+}
+@media (max-width: 500px) {
+    .xl{
+        display:none;
+    }
+    .footer-list{
+        flex-direction: column !important;
+    }
+}
+a{
+    text-decoration: none;
+}
+.contact-me{
+    gap: 10px;
+}
+.email-text{
+    color: #000;
+    font-size: 12px;
+    font-weight: 100 !important;
+}

@@ -1,0 +1,30 @@
+<div
+  [formGroup]="fg"
+  class="flex flex-col justify-center items-center w-full text-center gap-10 p-2"
+>
+  <h1 class="heading">What did you think of this page?</h1>
+  <rating formControlName="rating" [disabled]="isDisabled"></rating>
+  <p class="desc">
+    What can we do to improve it? Please be as detailed as you like. Real human
+    beings read every single review.
+  </p>
+ 
+  <div class="input">
+    <textarea
+        formControlName="comment"
+      name="review"
+      id=""
+      placeholder="this section is required  ✍️"
+      cols="30"
+      rows="10"
+    ></textarea>
+  </div>
+  <div class="flex flex-row justify-end w-full button">
+    <button class="send" (click)="addReview()" [disabled]="fg.invalid">Send your review!</button>
+  </div>
+</div>
+
+<div *ngIf="err" class ='flex flex-row justify-center w-full'>
+  {{err |json}}<br>
+  {{err.message}}
+</div>

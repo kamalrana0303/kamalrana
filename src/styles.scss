@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/cdk/overlay-prebuilt.css';
+
+body {
+    margin: 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: start;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100vh;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+:root {
+    --font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.srp {
+    --center-abs-margin: 180px;
+    --center-width: 652px;
+    --rhs-margin: 60px;
+    --rhs-width: 369px;
+}
+
+@media (max-width: 1300px) {
+    .srp {
+        --rhs-margin: 44px;
+    }
+}
+
+@media (max-width: 1121px) {
+    .srp {
+        --center-abs-margin: 28px;
+    }
+}

@@ -1,0 +1,54 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
+
+@Component({
+  selector: 'education',
+  templateUrl: './education.component.html',
+  styleUrls: ['./education.component.scss']
+})
+export class EducationComponent implements OnInit {
+  educationDetail = {
+    s1:{
+      name: 'Rukmani Devi Jaipuria Public School',
+      address: '23, Rajpur Rd, Ludlow Castle, Civil Lines, New Delhi, Delhi 110054',
+      period: 'till 2003',
+      src: '../../../assets/rukmani.jpeg'
+    },
+    s2: {
+      name: 'Rajkiya Pratibha Vikas Vidyalaya',
+      address: 'M6CG+W57, Raj Niwas Marg, Ludlow Castle, Civil Lines, New Delhi, Delhi 110054',
+      period: '2003-2011',
+      src: null
+    },
+    
+    g: {
+      name: 'Kirori Mal College',
+      address: 'M6M5+639, University of Delhi, University Enclave, Delhi, 110007',
+      period: '2011-2014',
+      src:'data:image/jpeg;base64,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'
+    },
+    pg: {
+      name:'University School of Information, Communication and Technology',
+      address:'H2W9+3R2, GGSIPU, Golf Course Rd, Sector 16 C, Dwarka, Delhi, 110078',
+      period: '2018-2021',
+      src:null
+    }
+
+  }
+  constructor(private router:Router) { }
+  baseUrl=environment.baseUrl;
+  ngOnInit(): void {
+  }
+
+  routeTo(id:string){
+    
+    var el = document.getElementById(id);
+   
+    el?.scrollIntoView();
+  }
+
+
+
+}

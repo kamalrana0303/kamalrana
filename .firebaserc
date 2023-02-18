@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kamalrana": {
+      "hosting": {
+        "kamalrana": [
+          "kamalrana"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kamalrana"
+  }
+}

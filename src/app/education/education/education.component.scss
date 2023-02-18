@@ -1,0 +1,181 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1,h2,h3{margin:0px;}
+p{
+    margin:0px;
+    
+}
+
+.controller{
+    position: fixed;
+    top:0;
+    bottom:0;
+    text-align: center;
+}
+.control{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.control > p{
+    font-size: 8px;
+    font-weight: bolder;
+}
+.control-menu{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+
+@media(max-width: 600px){
+    .controller{
+        bottom:0px;
+        top:auto;
+        position: fixed;
+        left:0;
+        right:0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background-color: #FFFFFF;
+    }
+    .control-menu{
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .control>p{
+        display: none;
+        font-size: smaller;
+    }
+    .main-area{
+        
+        margin-left: 0px !important;
+        margin-bottom: 100px;
+    }
+    .entry-title{
+        font-size:1.8rem;
+    }
+    .entry-subtitle{
+        font-size: 1rem;
+    }
+
+    .grid{
+        grid-template-columns: 1fr !important; 
+        grid-template-rows: auto;
+    }
+    
+  
+}
+
+.looks{
+    font-weight: bold;
+    color:#202124;
+}
+
+.main-area{
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+.circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+}
+
+.circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.circle-link svg{
+    fill:currentColor;
+    height: 24px;
+    width: 24px;
+}
+.entry-title{
+    font-family: 'Gilroy-Bold';
+    font-size:1.4rem;
+}
+.entry-subtitle{
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.549);
+}
+.detail{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+article{
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 400px;
+    gap:10px;
+}
+.bg-img{
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.shimmer{
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px; 
+  display: inline-block;
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.animate {
+  animation : shimmer 2s infinite;
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 1000px 100%;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

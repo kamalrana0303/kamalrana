@@ -1,0 +1,141 @@
+<div class="controller">
+  <div class="control-menu">
+    <div class="control" (click)="routeTo('pris')">
+      <a class="circle-link" >
+        <span class="looks">1</span>
+      </a>
+      <p>Primary school</p>
+    </div>
+    <div class="control" (click)="routeTo('secs')">
+        <a class="circle-link" >
+          <span class="looks">2</span>
+        </a>
+        <p>High school</p>
+    </div>
+    <div class="control" (click)="routeTo('g')">
+      <a class="circle-link">
+        <span class="looks">3</span>
+      </a>
+      <p>Graduation</p>
+    </div>
+    <div class="control" (click)="routeTo('pg')">
+      <a class="circle-link" >
+        <span class="looks">4</span>
+      </a>
+      <p>Post Graduation</p>
+    </div>
+    
+    <div class="control" >
+      <a class="circle-link" rel="noopener" [routerLink]="''">
+        <svg
+          class="close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+          ></path>
+          <path fill="none" d="M0 0h24v24H0V0z"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+<section class="main-area" id="main-area">
+  <div id="pris">
+    <article>
+      <header>
+        <h2 class="entry-title">
+          {{ educationDetail.s1.name }}
+        </h2>
+        <p class="entry-subtitle">{{ educationDetail.s1.address }}</p>
+        <p class="entry-subtitle">{{ educationDetail.s1.period }}</p>
+      </header>
+      <div class="grid">
+        <div
+          *ngIf="educationDetail.s1.src"
+          class="bg-img"
+          [ngStyle]="{
+            'background-image': 'url(' + educationDetail.s1.src + ')'
+          }"
+        ></div>
+        <div class="shine animate" *ngIf="!educationDetail.s1.src"></div>
+      </div>
+    </article>
+  </div>
+  <div id="secs">
+    <article>
+      <header>
+        <h2 class="entry-title">
+          {{ educationDetail.s2.name }}
+        </h2>
+        <p class="entry-subtitle">{{ educationDetail.s2.address }}</p>
+        <p class="entry-subtitle">{{ educationDetail.s2.period }}</p>
+      </header>
+      <div class="grid">
+        <div>
+          <div
+            class="bg-img"
+            *ngIf="educationDetail.s2.src"
+            [ngStyle]="{
+              'background-image': 'url(' + educationDetail.s2.src + ')'
+            }"
+          ></div>
+          <div class="shine animate" *ngIf="!educationDetail.s2.src"></div>
+        </div>
+        <div></div>
+      </div>
+    </article>
+  </div>
+  <div id="g">
+    <article>
+      <header>
+        <h2 class="entry-title">
+          {{ educationDetail.g.name }}
+        </h2>
+        <p class="entry-subtitle">{{ educationDetail.g.address }}</p>
+        <p class="entry-subtitle">{{ educationDetail.g.period }}</p>
+      </header>
+      <div class="grid">
+        <div>
+          <div
+            *ngIf="educationDetail.g.src"
+            class="bg-img"
+            [ngStyle]="{
+              'background-image': 'url(' + educationDetail.g.src + ')'
+            }"
+          ></div>
+          <div class="shine animate" *ngIf="!educationDetail.g.src"></div>
+        </div>
+        <div></div>
+      </div>
+    </article>
+  </div>
+  <div id="pg">
+    <article>
+      <header>
+        <h2 class="entry-title">
+          {{ educationDetail.pg.name }}
+        </h2>
+        <p class="entry-subtitle">{{ educationDetail.pg.address }}</p>
+        <p class="entry-subtitle">{{ educationDetail.pg.period }}</p>
+      </header>
+      <div class="grid">
+        <div>
+          <div
+            class="bg-img"
+            *ngIf="educationDetail.pg.src != null"
+            [ngStyle]="{
+              'background-image': 'url(' + educationDetail.pg.src + ')'
+            }"
+          ></div>
+          <div
+            class="shine animate"
+            *ngIf="educationDetail.pg.src == null"
+          ></div>
+        </div>
+        <div></div>
+      </div>
+    </article>
+  </div>
+</section>

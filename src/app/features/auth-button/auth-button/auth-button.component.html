@@ -1,0 +1,64 @@
+<button class="rounded-full square-24" [class.drop-down-input-active]="showPanel$ | async" cdkOverlayOrigin #originOverlay="cdkOverlayOrigin" >
+    <div *ngIf="isLoggedIn$|async as user;else authButtons"  >
+        <ng-container *ngIf="(user.providerData[0].photoURL ) as photoUrl; else name">
+          <img [src]="photoUrl" height="80px" width="auto" style="border-radius:50%">
+        </ng-container>
+        <ng-template #name>
+          <ng-container *ngIf="user.providerData[0].displayName as displayName; else email">
+            <div class="square-24 rounded-full"><span>{{displayName.toUpperCase().charAt(0)}}</span></div>
+          </ng-container>
+          <ng-template #email>
+            <ng-container *ngIf="user.providerData[0].email">
+              <div class="square-24 rounded-full"><span>{{user.providerData[0].email.toUpperCase().charAt(0)}}</span></div>
+            </ng-container>
+          </ng-template>
+        </ng-template>
+        
+    </div>
+     <ng-template #authButtons>
+      <a [routerLink]="['/sign-in']" class="sign-in">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  style="width: 24px; height:24px">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+        </svg>
+        
+      </a>
+     </ng-template>
+</button>
+
+
+ <ng-template cdkConnectedOverlay 
+ cdkConnectedOverlayHasBackdrop
+ cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+ [cdkConnectedOverlayOrigin]="originOverlay" 
+ [cdkConnectedOverlayOpen]="!!((showPanel$ ) | async)"
+ [cdkConnectedOverlayOffsetY]="220">
+  <section class="drop-down flex flex-col items-start">
+    <ng-container *ngIf="isLoggedIn$ | async as user">
+      <div class="first flex">
+        <div class="flex flex-row info-row">
+          <div class="square-24 rounded-full info-photo">
+            {{user.displayName?.charAt(0) | uppercase}}
+          </div>
+          <div class="info">
+            <h2>{{user.displayName}}</h2>
+            <p>{{user.email}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    
+    <ul class="flex flex-col w-full drop-down-list">
+      <a class="flex flex-row sign-out items-center w-full" (click)="signOut()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="height:24px; width: 24px;">
+          <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+        </svg> 
+        <div>Sign out</div>
+      </a>
+      
+    </ul>
+    <div class="flex flex-row justify-center w-full kamalrana">
+      {{(isLoggedIn$ | async)?.displayName}}
+    </div>
+    
+  </section>
+ </ng-template>

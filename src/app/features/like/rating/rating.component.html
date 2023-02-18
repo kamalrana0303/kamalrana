@@ -1,0 +1,9 @@
+<ul class="flex flex-row justify-center" [list]="value">
+    <li 
+    class="star-inactive"
+        (click)="setValue(index)"
+      id="{{ index }}_option"
+      #options
+      *ngFor="let i of [0,1,2,3,4];  let index = index;"
+    ></li>
+</ul>

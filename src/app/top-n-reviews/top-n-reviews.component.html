@@ -1,0 +1,18 @@
+<div class="flex flex-col border-box w-full justify-center items-center">
+    <h1>Reviews by users</h1>
+    <div class="w-full">
+        <div *ngIf="(topReviews$ |async) as data" class="w-full">
+            <ul *ngIf="(data.user_review) as reviews" class="w-full">
+                <li *ngFor="let review of reviews" class="flex flex-col item">
+                    <div class="flex flex-row w-full" style="gap: 10px">
+                        <div> <div class="email">{{review.user.email.charAt(0)}}</div></div>
+                        <div class="w-full">
+                            {{review.comment}}
+                            {{review.rating}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,164 @@
+:host{
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+    ;
+    --primary: #000; //#1876D1;
+    background-color: transparent;
+    
+}
+h1,p{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.title{
+    padding: 20px 4px;
+}
+.error{
+    color: red;
+    text-align: center;
+}
+.sign-in{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 30rem;
+}
+@media (max-width: 1400px) {
+    .sign-in{
+        padding: 8rem 20rem !important;
+    }
+}
+@media (max-width: 1000px) {
+    .sign-in{
+        padding: 8rem 10rem !important;
+    }
+}
+@media (max-width: 500px) {
+    .sign-in{
+        padding: 10px !important;
+    }
+}
+
+
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: start;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-end{
+    justify-content: end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: start;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+.rounded-md{
+    border-radius: 10px;
+}
+.rounded-sm{
+    border-radius: 5px;
+}
+
+.text-sm{
+    font-size: 12px !important;
+}
+.text-primary{
+    color:  #1876D1;
+}
+
+.form-group{
+    gap: 20px;
+}
+.form-control>label{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary) !important;
+}
+
+
+.font-semibold{
+    font-weight: 500;
+}
+input{
+    outline: none;
+    padding: 10px 5px;
+}
+input:focus{
+    border: 1px solid var(--primary) !important;
+}
+input{
+    outline:none !important;
+    border: 1px solid var(--primary) !important;
+}
+button{
+    padding: 8px 0px;
+    border-radius: 10px;
+    outline: none !important;
+    border: 1px solid #000 !important;
+    font-size: 12px;
+    color:var(--primary) ;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+.kamalrana{
+    text-align: left;
+    font-size: 8px;
+    padding-right: -10px;
+}
+.sign-up{
+    margin: 10px 2px !important;
+}
+
+svg#clouds{
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+}
+svg#rocket,
+div#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+}
+
+svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+}
