@@ -56,7 +56,9 @@ body {
 .text-center {
     text-align: center;
 }
-
+.font-white{
+    color: #fff;
+}
 :root {
     --font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
@@ -82,4 +84,34 @@ body {
     .srp {
         --center-abs-margin: 28px;
     }
+}
+
+
+
+.token.class-name, .token.function, .token.selector, .token.selector .class, .token.selector.class, .token.tag {
+    --tw-text-opacity: 1;
+    color: rgb(244 114 182/var(--tw-text-opacity)) !important;
+}
+.token .punctuation{
+    --tw-text-opacity: 1;
+    color: rgb(100 116 139/var(--tw-text-opacity)) !important;
+}
+.token.attr-name, .token.important, .token.keyword, .token.pseudo-class, .token.rule {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225/var(--tw-text-opacity)) !important;
+}
+.token.attr-value, .token.class, .token.string {
+    --tw-text-opacity: 1;
+    color: rgb(125 211 252/var(--tw-text-opacity)) !important;
+}
+
+.code-highlight {
+    border-radius: 0.25rem;
+    padding: 0.125rem 0.1875rem;
+    margin: 0 -0.1875rem;
+    
+}
+.text{
+    --tw-text-opacity: 1;
+    color: rgb(248 250 252/var(--tw-text-opacity));
 }

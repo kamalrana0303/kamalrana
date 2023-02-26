@@ -1,1 +1,47 @@
-<p>overview works!</p>
+<section class="flex flex-col w-full;" >
+    <div class="flex flex-row w-full">
+        <div class="border-box article" style="flex-grow:1" id="overview-article">
+            <article [id]="items[0].ref">
+               <h1 class="heading">Work at</h1>
+                <p class="para">I am a Web developer working at Onelap telematics private ltd. I  joined Onelap on 1st Jan, 2021 as a Java fullstack web developer.</p>
+                <ol>
+                    <li>
+                        Developed Ecom website onelap.in.
+                    </li>
+                    <li>
+                        Developed CRM includes return and replacement of orders, issues management etc.
+                    </li>
+                </ol>
+            </article>
+            <article [id]="items[1].ref">
+                <h1 class="heading">Studied at</h1>
+                
+                <ol>
+                    <li>
+                        Rukmani Devi Jaipuria Public School
+                    </li>
+                    <li>
+                        Rajkiya Pratibha Vikas Vidyalaya, Civil Lines
+                    </li>
+                    <li>
+                        Kirori Mal College, DU
+                    </li>
+                    <li>
+                        University School of Information, Communication and Technology, GGSIPU
+                        <ul>
+                            <li>I did Masters in Computer Application ( 3 year PG degree)</li>
+                            <li>Duration from 2018 to 2021</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+            </article>
+            <div style="height:250px;">
+
+            </div>
+        </div>
+        <div class="border-box toc" style="flex-grow: 0.5;">
+            <kamal-toc [selectedId]="selectedId"  [items]="items" (selected)="selectedItem($event)"></kamal-toc>
+        </div>
+    </div>
+</section>

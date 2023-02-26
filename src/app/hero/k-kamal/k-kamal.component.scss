@@ -1,159 +1,15 @@
-// :host {
-//     .srp {
-//         --center-abs-margin: 180px;
-//         --center-width: 652px;
-//         --rhs-margin: 60px;
-//         --rhs-width: 369px;
-//     }
-//     @media (max-width: 1300px) {
-//         .srp {
-//             --rhs-margin: 44px;
-//         }
-//     }
+:host{
+    --font-size:  14px;
+}
+@media(max-width: 500px){
+    :host{
+        --font-size: 10px;
+    }
+}
 
-//     @media (max-width: 1121px) {
-//         .srp {
-//             --center-abs-margin: 28px;
-//         }
-
-       
-//     }
-    
-// }
-
-// .XqFnDf {
-//     flex: 0 auto;
-//     width: calc(var(--center-width) + var(--rhs-margin) + var(--rhs-width));
-//     margin-left: var(--center-abs-margin);
-// }
-
-// .MjUjnf {
-//     height: 58px;
-//     overflow: hidden;
-//     margin: 4px 0 31px;
-//     padding-top: 8px;
-//     position: relative;
-//     text-align: right;
-//     text-align: left;
-//     margin-bottom: 17px;
-// }
-
-// .left {
-//     float: left;
-//     margin-right: 16px;
-//     text-align: left;
-// }
-
-// .block {
-//     display: block;
-// }
-
-// .JlxBoc {
-//     border-radius: 8px;
-//     height: 56px;
-//     margin-right: 19px;
-//     overflow: hidden;
-//     position: relative;
-//     vertical-align: top;
-// }
-
-// .contain {
-//     height: 56px;
-//     max-width: 56px;
-//     object-fit: contain;
-// }
-
-// .cursor {
-//     cursor: pointer;
-// }
-
-// .inline-block {
-//     display: inline-block;
-// }
-
-// .clear-both {
-//     clear: both;
-// }
-
-// .yGdMVd.ZxoDOe {
-//     align-items: center;
-//     color: #202124;
-//     display: flex;
-//     height: 58px;
-//     padding-bottom: 0;
-// }
-
-// .yGdMVd .PyJv1b {
-//     height: 36px;
-//     padding-bottom: 0;
-//     padding-top: 10px;
-//     position: relative;
-//     text-overflow: ellipsis;
-//     top: -15px;
-//     white-space: nowrap;
-//     max-width: 576px;
-// }
-
-// .yGdMVd .wx62f {
-//     color: #5F6368;
-//     display: inline-block;
-//     font-family: arial, sans-serif;
-//     font-size: 14px;
-//     line-height: 22px;
-//     overflow: hidden;
-//     padding: 0;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-// }
-
-// .zqhAOd {
-//     border: 1px solid;
-//     border-radius: 2px;
-//     box-sizing: border-box;
-//     display: inline-block;
-//     font-size: 11px;
-//     line-height: 11px;
-//     margin: 2px 5px 2px 0;
-//     max-height: 14px;
-//     padding: 1px 3px 0;
-//     transform: translateY(-1px);
-// }
-
-// .heading {
-//     font-family: Google Sans, arial, sans-serif-medium, sans-serif;
-//     font-size: 18px;
-//     font-weight: bold;
-//     line-height: 36px;
-// }
-
-// .yGdMVd .EGmpye {
-//     display: flex;
-//     max-width: 576px;
-//     padding-top: 2px;
-//     position: relative;
-//     top: -15px;
-// }
-
-// @media(max-width: 500px) {
-//     .visible-gt-sm {
-//         display: none;
-//     }
-// }
-
-
-// .GRl5yb.a8pxAe {
-//     visibility: inherit;
-// }
-
-// .GRl5yb.UWyTaf {
-//     text-align: right;
-// }
-
-// .BhBPtb {
-//     text-align: right;
-// }
 .a{
     flex: 0 auto;
+    padding: 12px 20px;
 //    width: calc(var(--center-width) + var(--rhs-margin) + var(--rhs-width));
     margin-left: var(--center-abs-margin);
 }
@@ -219,30 +75,12 @@ img{
     text-align: right;
     max-height: 120px;
 }
-.chip{
-    color: #D60024;
-    background-color: #FFC8C8;
-    outline: 0;
-    border: 1px solid currentColor;
-}
-.chip-rd{
-    border-radius: 100px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 16px;
-    margin: 14px 0 6px 8px;
-    overflow: hidden;
-    text-decoration: none;
-    vertical-align: top;
-    -webkit-text-size-adjust: none;
-    padding: 12px 20px;
-}
+
 .NQyKp {
     border-radius: 100px;
     cursor: pointer;
     display: inline-block;
-    font-size: 14px;
+    font-size: var(--font-size);
     line-height: 16px;
     margin: 14px 0 6px 8px;
     overflow: hidden;
@@ -258,4 +96,8 @@ img{
 }
 .REySof:hover {
     background-color: transparent;
+}
+
+.Maj6Tc {
+    border: 1px solid currentColor;
 }

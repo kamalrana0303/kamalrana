@@ -1,0 +1,25 @@
+<div class="border-box flex flex-row" style="margin-top: 100px">
+    <button role="tab" class="tab" routerLinkActive="active" [routerLink]="[firstChildFragment,'design']" >
+        <span class="content">
+            <span class="icon" > 
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="M751 460 596 305l70-70q17-17 42-17t42 17l71 71q17 17 17 42t-17 42l-70 70ZM120 936V780l194-194L93 364l174-176 223 223 106-106 155 155-106 106 223 223-175 173-222-221-195 195H120Zm237-393 90-90-73-73-48 48-42-42 48-48-64-64-90 90 179 179Zm334 335 90-90-64-64-48 48-42-42 48-48-73-73-90 90 179 179Zm-511-2h70l415-415-70-70-415 415v70Z"/></svg>
+            </span>
+            <span class="label">
+                Design
+            </span>
+        </span>
+    </button>
+    <button role="tab" class="tab" routerLinkActive="active" [routerLink]="[firstChildFragment,'impl']">
+        <span class="content">
+            <span class="icon" > 
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="m384 721 43-43-101-102 101-101-43-43-144 144.5L384 721Zm192 0 145-145-144-144-43 43 101 101-102 102 43 43ZM180 936q-24.75 0-42.375-17.625T120 876V276q0-24.75 17.625-42.375T180 216h205q5-35 32-57.5t63-22.5q36 0 63 22.5t32 57.5h205q24.75 0 42.375 17.625T840 276v600q0 24.75-17.625 42.375T780 936H180Zm0-60h600V276H180v600Zm300-617q14 0 24.5-10.5T515 224q0-14-10.5-24.5T480 189q-14 0-24.5 10.5T445 224q0 14 10.5 24.5T480 259ZM180 876V276v600Z"/></svg>
+            </span>
+            <span class="label">
+                Implementation
+            </span>
+        </span>
+    </button>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

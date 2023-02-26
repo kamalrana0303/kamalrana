@@ -1,0 +1,16 @@
+.div,.img,.li,.button,.ul,.span{
+    --tw-text-opacity: 1;
+    color:rgb(244 114 182/var(--tw-text-opacity));;
+}
+.token .punctuation{
+    --tw-text-opacity: 1;
+    color: rgb(100 116 139/var(--tw-text-opacity));
+}
+.token.attr-name, .token.important, .token.keyword, .token.pseudo-class, .token.rule {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225/var(--tw-text-opacity));
+}
+.token.attr-value, .token.class, .token.string {
+    --tw-text-opacity: 1;
+    color: rgb(125 211 252/var(--tw-text-opacity));
+}

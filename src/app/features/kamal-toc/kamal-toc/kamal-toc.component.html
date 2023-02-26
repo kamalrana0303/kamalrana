@@ -1,0 +1,8 @@
+<ul class="kamal-nav-list">
+    <li class="kamal-nav-item kamal-nav-heading">
+        <span class="kamal-nav-title" style="word-spacing: nowrap;">on this page</span>
+    </li>
+    <li class="kamal-nav-item" *ngFor="let item of items;let i=index">
+       <a class="kamal-nav-title" [class.selected]="item.ref==selectedId" (click)="scrollTo(items[i].ref, items[i].parent)">{{item.title}}</a>
+    </li>
+</ul>

@@ -7,5 +7,7 @@ export const environment = {
     authDomain: 'kamalrana.firebaseapp.com',
     messagingSenderId: '498390616487',
   },
-  production: true
+  useEmulators:false,
+  production: true,
+  baseUrl: 'http://localhost:4200/',
 };

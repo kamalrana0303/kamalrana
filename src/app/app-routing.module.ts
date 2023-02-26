@@ -4,11 +4,26 @@ import { SignInComponent } from './features/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './features/auth/sign-up/sign-up.component';
 
 import {AuthGuard, redirectLoggedInTo, canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard'
+import { HeroComponent } from './hero/hero/hero.component';
+import { OverviewComponent } from './hero/overview/overview.component';
+import { BlogComponent } from './hero/hero/blog/blog.component';
 const routes: Routes = [
   {
-    path: 'hero', loadChildren:()=>import('./hero/hero.module').then(m=>m.HeroModule), pathMatch: 'full'
+    path: '', component:HeroComponent, children: [
+      {
+        path: 'overview', component: OverviewComponent, pathMatch: 'full'
+      },
+      {
+        path: 'blog', component:BlogComponent
+      },
+      {
+        path: '', redirectTo: 'overview', pathMatch:'full'
+      }
+    ]
   },
-  
+  {
+    path: 'ui', loadChildren:()=> import('./code/code.module').then(m=>m.CodeModule)
+  },
   {
     path: 'edu', loadChildren: ()=>import('./education/education.module').then(m=>m.EducationModule)
   },
@@ -32,7 +47,7 @@ const routes: Routes = [
     }),loadChildren: ()=> import("./features/chat/chat.module").then(m=>m.ChatModule)
   },
   {
-    path: '**', redirectTo: 'hero'
+    path: '**', redirectTo: ''
   }
 ];
 
