@@ -32,3 +32,6 @@ firebase login:add another@gmail.com
 firebase login:use another@gmail.com
 firebase init hosting
 firebase init emulators
+
+npm install ngx-image-cropper
+npm install @capacitor/camera

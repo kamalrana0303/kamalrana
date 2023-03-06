@@ -4,6 +4,18 @@
 body {
     margin: 0px;
 }
+.absolute{
+    position:absolute;
+}
+.relative{
+    position: relative;
+}
+.top-0{
+    top: 0;
+}
+.left-0{
+    left: 0;
+}
 
 .flex {
     display: flex;
@@ -32,6 +44,9 @@ body {
 .justify-end {
     justify-content: end;
 }
+.justify-around{
+    justify-content: space-around;
+}
 
 .items-center {
     align-items: center;
@@ -40,7 +55,9 @@ body {
 .items-start {
     align-items: start;
 }
-
+.items-end{
+    align-items: end;
+}
 .w-full {
     width: 100%;
 }
@@ -48,7 +65,12 @@ body {
 .h-full {
     height: 100vh;
 }
-
+.h-20{
+    height: 5rem;
+}
+.mt-8{
+    margin-top: 2rem;
+}
 .rounded-full {
     border-radius: 50%;
 }
@@ -59,6 +81,8 @@ body {
 .font-white{
     color: #fff;
 }
+
+
 :root {
     --font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }

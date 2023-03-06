@@ -9,7 +9,8 @@ import { HttpLink } from 'apollo-angular/http';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { setContext } from 'apollo-link-context';
 import { take } from 'rxjs';
-const uri = 'http://localhost:8080/v1/graphql'; // <-- add the URL of the GraphQL server here
+import { environment } from 'src/environments/environment';
+const uri =environment.hasura; // <-- add the URL of the GraphQL server here
 export function createApollo(
   httpLink: HttpLink,
   auth: AngularFireAuth

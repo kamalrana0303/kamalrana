@@ -7,6 +7,7 @@ export const environment = {
     authDomain: 'kamalrana.firebaseapp.com',
     messagingSenderId: '498390616487',
   },
+  hasura:'https://exotic-bulldog-89.hasura.app/v1/graphql',
   useEmulators:false,
   production: true,
   baseUrl: 'http://localhost:4200/',

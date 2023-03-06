@@ -1,6 +1,6 @@
   
    <div class="toolbar gap-2" role="banner">
-    <span class="logo">
+    <span class="logo" style="cursor: pointer" [routerLink]="['intro']">
       <svg
         width="70"
         height="25"
@@ -73,6 +73,7 @@
   
   </div>
   <div style="position:relative; top: 60px;">
+    
     <router-outlet></router-outlet>
   </div>
   

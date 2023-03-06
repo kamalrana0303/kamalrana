@@ -1,0 +1,81 @@
+<div
+#host
+style="margin-top:60px;"
+class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8; mt-20 sm:mt-24 lg:mt-32 lg:grid lg:gap-8 lg:grid-cols-12 lg:items-center"
+>
+<div class="relative row-start-1 col-start-6 xl:col-start-7 col-span-7 xl:col-span-6">
+
+</div >
+  <div  #container1 class="mx-auto relative row-start-1 col-start-1 col-span-5 xl:col-span-6 -mt-10">
+    <div  class="h-[24.25rem] max-w-xl mx-auto flex items-center justify-center">
+      <div class="w-full flex-none">
+        <div class="lg:-mr-18">
+          <div
+            #container1
+            class="relative z-10 rounded-lg shadow-xl text-slate-900 mx-auto sm:w-[23.4375] ring-1 ring-slate-900/5"
+            style="transform-origin: 50% 50% 0px;"
+           
+          >
+            <div
+
+              #flex1
+              class="bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 flex  p-8"
+              style="transform-origin: 50% 50% 0px"
+            >
+              <div
+                class="absolute z-20 top-1/2 right-0 xl:right-auto xl:left-0 text-black rounded-full -mt-4 -mr-4 xl:mr-0 xl:-mr-4 pointer-events-none"
+                style="opacity: 0; transform-origin: 50% 50% 0px"
+              >
+                <svg class="h-8 w-8" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="rgba(255, 255, 255, 0.5)"
+                    stroke-width="8"
+                    fill="rgba(0, 0, 0, 0.5)"
+                  ></circle>
+                </svg>
+              </div>
+              <div
+              #flex2
+                class="relative z-10 overflow-hidden flex-none -m-8 mr-8 w-48 h-auto"
+                style="tranform-origin: 50% 50% 0px; border-radius: 0%"
+              >
+                <img
+                  #flex3
+                  src="../../../../assets/profile-image.jpeg"
+                  decoding="async"
+                  alt=""
+                  class="absolute max-w-none object-cover bg-slate-100"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    left: 0px;
+                    top: 0px;
+                    transform-origin: 50% 50% 0px;
+                  "
+                />
+              </div>
+              <div class="" style="transform-origin: 50% 50% 0px">
+                <div class="mb-4" style="transform-origin: 50% 50% 0px">
+                  <ng-container *ngFor="let quote of quotes" >
+                    <span class="relative inline-flex whitespace-pre text-black text-lg" style="transform-origin: 50% 50% 0px">
+                      <span class="absolute top-0 left-0" style="font-weight:500">{{quote}} </span>
+                      <span style="opacity: 0; font-weight: 500">{{quote}} </span>
+                    </span>
+                  </ng-container> 
+                </div>
+                <div class="flex flex-col items-start" style="font-weight: 500;">
+                  <p class="transition-colors duration-500 text-sky-500">Kamal Mohan Singh Rana</p>
+                  <p class="transition-colors duration-500 text-slate-500">Software engineer, Onelap</p>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

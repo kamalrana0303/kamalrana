@@ -1,0 +1,93 @@
+<div id="container" class="flex flex-col w-full border-box" style="border-radius:4px;">
+  <header class="flex flex-row justify-between">
+    <h1>{{ title }}</h1>
+    <button class="close button" (click)="close()">
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          data-supported-dps="24x24"
+          fill="currentColor"
+          class="mercado-match"
+          width="24"
+          height="24"
+          focusable="false"
+        >
+          <path
+            d="M13.42 12L20 18.58 18.58 20 12 13.42 5.42 20 4 18.58 10.58 12 4 5.42 5.42 4 12 10.58 18.58 4 20 5.42z"
+          ></path>
+        </svg>
+      </li>
+    </button>
+  </header>
+  <div #contentContainer [ngTemplateOutlet]="widget"></div>
+</div>
+
+<ng-template #photoWidget>
+  <div class="photo-frame text-center">
+    <div class="image-selector-heading">
+      <p></p>
+    </div>
+    <img *ngIf="Capacitor.getPlatform()==='web'" [src]="desktopMyPhoto" class="rounded-full circle">
+    <img *ngIf="Capacitor.getPlatform()!=='web'" [src]="mobileMyPhoto" class="rounded-full circle">
+    <p>
+      we require member to use their real identities, so take or upload a photo of yourself. Then crop, filter, and adjust it to perfection.
+    </p>
+  </div>
+  <footer>
+    <div class="text-right">
+      <div class="action">
+        <div class="relative ml-1">
+          <button class="ml-1 mv-0 upload-label button" (click)="selectImage()">Use camera</button>
+        </div>
+        <div class="relative ml-1">
+          <input
+            accept="image/*"
+            class="image-selector"
+            id="image-selector"
+            type="file"
+            (change)="onFileChange($event)"
+          />
+          <label for="image-selector" class="ml-1 mv-0 upload-label button">
+            Upload photo
+          </label>
+        </div>
+      </div>
+    </div>
+  </footer>
+</ng-template>
+
+<ng-template #editPhotoWidget>
+
+  <div class="image-editor">
+    <image-cropper
+    #cropper
+    [autoCrop]="false"
+    [imageChangedEvent]="imgChangeEvt"
+    [imageBase64]="mobileMyPhoto"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="300 / 300"
+    [roundCropper]="true"
+    [cropperStaticHeight]="300"
+    [hideResizeSquares]="true"
+    format="png"
+    (imageCropped)="cropImg($event)"
+    (imageLoaded)="imgLoad()"
+    (cropperReady)="initCropper()"
+    (loadImageFailed)="imgFailed()"
+  >
+  </image-cropper>
+  
+  </div>
+  <footer>
+    <div class="text-right">
+      <div class="action">
+        <div class="relative ml-1">
+          <button for="image-selector" class="ml-1 mv-0 upload-label button" (click)="save()">
+            Save photo
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</ng-template>

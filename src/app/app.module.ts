@@ -25,6 +25,8 @@ import { OverviewComponent } from './hero/overview/overview.component';
 import { BlogComponent } from './hero/hero/blog/blog.component';
 import { KamalTocModule } from './features/kamal-toc/kamal-toc.module';
 import { ProductDetailModule } from './features/product-detail/product-detail.module';
+import { ReviewModule } from './features/review/review.module';
+import { BlogProfilePhotoModule } from './features/blog-profile-photo/blog-profile-photo.module';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { ProductDetailModule } from './features/product-detail/product-detail.mo
     KScrollingCarouselModule,
     KamalTocModule,
     ProductDetailModule,
+    ReviewModule,
+    BlogProfilePhotoModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

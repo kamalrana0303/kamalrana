@@ -1,0 +1,77 @@
+.container{
+    min-height: 5rem;
+}
+.cover{
+    min-height: 159px;
+    max-height: 159px;
+    position:relative;
+    overflow-y: hidden;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-property: max-height;
+    transition-delay: 0s;
+    background-color: #000;
+
+}
+.hero-cover{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity;
+    transition-delay: 1s;
+    opacity: 1;
+}
+.background-image-edit{
+
+}
+.ph5 {
+    padding-left: 24px!important;
+    padding-right: 24px!important;
+}
+.photo-container{
+    margin-top: -112px;
+    z-index: 2;
+}
+.photo-card{
+    background-clip:border-box;
+    background-color: #FFF;
+    width: 160px;
+    height: 160px;
+    box-sizing: border-box;
+    border-radius: 49.9%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo-img{
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+}
+button{
+    min-height: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+.edit-cover, .edit-photo{
+    font-weight: 600;
+    cursor:pointer;
+    background: #FFF;
+    border:none;
+    border-radius: 50%;
+    height: 3.2rem;
+    width: 3.2rem;
+}
+.edit-cover{
+    top: 2rem;
+    right: 2rem;
+}
+.edit-photo{
+    display: flex;
+    justify-content: end;
+}

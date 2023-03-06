@@ -35,7 +35,7 @@ const ADD_USER = gql`
 `;
 
 const ADD_REVIEW = gql`mutation ADD_REVIEW($comment: String, $rating: Int, $uuid: uuid) {
-  insert_user_review(objects: {comment: $comment, rating: $rating, userId: $uuid}) {
+  insert_users_review(objects: {comment: $comment, rating: $rating, userId: $uuid}) {
     returning {
       comment
       rating

@@ -47,7 +47,7 @@ export class SignUpComponent implements OnInit {
     // )
     .subscribe({
       next:()=>{
-        this.router.navigate([''])
+        this.router.navigate(['/'])
       },
       error:(error:any)=> {
        this.msg = error.message;

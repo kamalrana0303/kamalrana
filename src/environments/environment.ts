@@ -13,7 +13,8 @@ export const environment = {
   },
   useEmulators:false,
   production: false,
-  baseUrl: 'http://localhost:4200/'
+  baseUrl: 'http://localhost:4200/',
+  hasura:'https://exotic-bulldog-89.hasura.app/v1/graphql'
 };
 
 /*

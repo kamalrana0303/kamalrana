@@ -39,7 +39,7 @@ export class HtmlTextDirective {
     //.replace(/>([^<>]*)</g,`><span class='code-highlight'>$1</span><`)
     .replace(/&lt;li([^<>]*)&gt;/g, `<span class='token tag'>&lt;li$1&gt;</span>`)
     .replace(/_ngcontent([^<>]*)-c61=""/g,'')
-    console.log(this.elementRef.nativeElement.innerHTML)
+   
     //.replace('/class/g',`cls`);
   }
 }

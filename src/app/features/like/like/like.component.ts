@@ -68,7 +68,8 @@ export class LikeComponent implements OnInit {
       return result?.data
     }))
   }
-  err:any
+  message:any
+  success:any;
   addReview(){
     
     if(this.fg.valid){
@@ -78,10 +79,12 @@ export class LikeComponent implements OnInit {
           this.isDisabled =false;
           console.log(res)
           this.fg.reset();
+          this.message = res;
+
         },
         error: err=>{
           this.isDisabled =false;
-          this.err = err;
+          this.message = err;
         }
       })
     }

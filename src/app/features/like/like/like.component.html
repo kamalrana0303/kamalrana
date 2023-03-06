@@ -24,7 +24,18 @@
   </div>
 </div>
 
-<div *ngIf="err" class ='flex flex-row justify-center w-full'>
-  {{err |json}}<br>
-  {{err.message}}
-</div>
+<div  class ='flex flex-row justify-center w-full' style="padding-bottom: 100px;">
+  <div *ngIf="message" >
+    <ng-container  *ngIf="(message.graphQLErrors && message.graphQLErrors.length != 0 && message.graphQLErrors[0].message);">
+      <div class="text-center warn">
+        {{message.graphQLErrors[0].message}}
+      </div>
+    </ng-container>
+   
+    <div *ngIf="message.data">
+      Thank you for your review. It matters.
+    </div>
+
+    </div>
+  </div>
+

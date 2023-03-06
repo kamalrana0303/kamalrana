@@ -1,4 +1,4 @@
-<button class="rounded-full square-24" [class.drop-down-input-active]="showPanel$ | async" cdkOverlayOrigin #originOverlay="cdkOverlayOrigin" >
+<button class="rounded-full square-24" (click)="onClick()"  [class.drop-down-input-active]="showPanel$ | async" cdkOverlayOrigin #originOverlay="cdkOverlayOrigin" >
     <div *ngIf="isLoggedIn$|async as user;else authButtons"  >
         <ng-container *ngIf="(user.providerData[0].photoURL ) as photoUrl; else name">
           <img [src]="photoUrl" height="80px" width="auto" style="border-radius:50%">
@@ -28,6 +28,7 @@
 
  <ng-template cdkConnectedOverlay 
  cdkConnectedOverlayHasBackdrop
+ [cdkConnectedOverlayScrollStrategy]="(scrollStrategy)"
  cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
  [cdkConnectedOverlayOrigin]="originOverlay" 
  [cdkConnectedOverlayOpen]="!!((showPanel$ ) | async)"
